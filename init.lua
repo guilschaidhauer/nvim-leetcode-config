@@ -25,8 +25,13 @@ require("nvim-treesitter.configs").setup({
 -- Configure nvim-tree
 require("nvim-tree").setup()
 
+-- Keybindings
+
 -- Keybinding to toggle file explorer
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+
+-- Keybinding to yank whole file
+vim.keymap.set("n", "yaa", "ggVG\"+y", { noremap = true, silent = true })
 
 -- Basic Neovim settings
 vim.o.number = true          -- Show line numbers
