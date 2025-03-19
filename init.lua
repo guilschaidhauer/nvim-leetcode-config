@@ -33,6 +33,9 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent
 -- Keybinding to yank whole file
 vim.keymap.set("n", "yaa", "ggVG\"+y", { noremap = true, silent = true })
 
+-- Keybinding to split window vertically
+vim.keymap.set("n", "<leader>v", ":vsplit<CR>", { noremap = true, silent = true })
+
 -- Basic Neovim settings
 vim.o.number = true          -- Show line numbers
 vim.o.relativenumber = true  -- Relative line numbers
