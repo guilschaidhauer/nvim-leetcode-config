@@ -14,7 +14,8 @@ require("lazy").setup({
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },  -- Syntax highlighting
   { "nvim-tree/nvim-tree.lua" },  -- File explorer
   { "folke/tokyonight.nvim", lazy = false, priority = 1000 },  -- Ensure this is correctly added
-  { "rose-pine/neovim", name = "rose-pine", lazy = false, priority = 1000 }  -- Add Rose Pine theme
+  { "rose-pine/neovim", name = "rose-pine", lazy = false, priority = 1000 },  -- Add Rose Pine theme
+  { "sainnhe/sonokai", lazy = false, priority = 1000 }  -- Sonokai theme
 })
 
 -- Enable Treesitter for syntax highlighting
@@ -73,4 +74,14 @@ require("rose-pine").setup({
   }
 })
 
-vim.cmd.colorscheme("rose-pine")  -- Apply the theme
+-- Sonokai theme
+vim.g.sonokai_style = "andromeda"  -- Options: "default", "atlantis", "andromeda", "shusia", "maia", "espresso"
+vim.g.sonokai_enable_italic = 1  -- Enable italic comments
+vim.g.sonokai_disable_italic_comment = 0
+vim.g.sonokai_diagnostic_text_highlight = 1  -- Enable diagnostic text highlight
+vim.g.sonokai_diagnostic_line_highlight = 1  -- Enable diagnostic line highlight
+vim.g.sonokai_diagnostic_virtual_text = "colored"  -- Colored virtual text
+--
+
+-- vim.cmd.colorscheme("rose-pine")  -- Apply the theme
+vim.cmd.colorscheme("sonokai")  -- Sonokai

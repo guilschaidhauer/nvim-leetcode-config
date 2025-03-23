@@ -3,5 +3,6 @@
   "nvim-tree.lua": { "branch": "master", "commit": "44d9b58f11d5a426c297aafd0be1c9d45617a849" },
   "nvim-treesitter": { "branch": "master", "commit": "20a7e40203dab3454686e057adecd805f3d6d334" },
   "rose-pine": { "branch": "main", "commit": "7d1b5c7dcd274921f0f58e90a8bf935f6a95fbf3" },
+  "sonokai": { "branch": "master", "commit": "9679341d4141ed81376f2bdf5e69b78dc348d212" },
   "tokyonight.nvim": { "branch": "main", "commit": "057ef5d260c1931f1dffd0f052c685dcd14100a3" }
 }
