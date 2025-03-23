@@ -13,7 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },  -- Syntax highlighting
   { "nvim-tree/nvim-tree.lua" },  -- File explorer
-  { "folke/tokyonight.nvim", lazy = false, priority = 1000 }  -- Ensure this is correctly added
+  { "folke/tokyonight.nvim", lazy = false, priority = 1000 },  -- Ensure this is correctly added
+  { "rose-pine/neovim", name = "rose-pine", lazy = false, priority = 1000 }  -- Add Rose Pine theme
 })
 
 -- Enable Treesitter for syntax highlighting
@@ -58,4 +59,18 @@ require("tokyonight").setup({
         variables = {},
     },
 })
-vim.cmd.colorscheme("tokyonight-night")  -- Apply the theme
+
+require("rose-pine").setup({
+  variant = "main",  -- Options: "main", "moon", "dawn"
+  dark_variant = "main",
+  bold_vert_split = false,
+  dim_nc_background = false,
+  disable_background = false,
+  disable_float_background = false,
+  highlight_groups = {
+      CursorLine = { bg = "overlay" },
+      StatusLine = { fg = "love", bg = "overlay" },
+  }
+})
+
+vim.cmd.colorscheme("rose-pine")  -- Apply the theme
